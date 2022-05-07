@@ -73,7 +73,7 @@ class Generator(nn.Module):
         for layer in self.up_blocks:
             x = layer(x)
         x = self.last_block(x)
-        return torch.tanh(x)
+        return x
 
 ### Discriminator
 
