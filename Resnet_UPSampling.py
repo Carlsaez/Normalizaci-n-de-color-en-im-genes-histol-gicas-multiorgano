@@ -30,7 +30,7 @@ class Residual_block(nn.Module):
             Conv_Block(input, output, kernel=3, stride=1, activation=False, padding=1)
         )
     def forward(self, x):
-        return x + self.build_block(x)
+        return nn.ReLU(True)(x + self.build_block(x))
 
 
 class Generator(nn.Module):
